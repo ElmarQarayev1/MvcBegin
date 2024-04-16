@@ -1,0 +1,13 @@
+﻿@using MvcAppBegin.Models
+@{
+
+    Product product = ViewBag.Product;
+
+}
+<h1>Product Details</h1>
+<ul>
+    <li>
+        @product.Id - @product.Name - @product.Price
+    </li>
+</ul>
+

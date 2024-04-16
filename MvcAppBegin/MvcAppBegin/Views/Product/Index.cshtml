@@ -1,0 +1,21 @@
+﻿@using MvcAppBegin.Models
+@{
+    List<Product> products = ViewBag.Products;
+}
+
+<h1>Products</h1>
+<ul>
+    @foreach (var product in products)
+    {
+        <li>
+            @if (product.Price < 100)
+            {
+                <a href="details/@product.Id" style="color: red;">@product.Id - @product.Name - @product.Price</a>
+            }
+            else
+            {
+                <a href="details/@product.Id" style="color: green;">@product.Id - @product.Name - @product.Price</a>
+            }
+        </li>
+    }
+</ul>
