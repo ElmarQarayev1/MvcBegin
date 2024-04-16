@@ -22,7 +22,7 @@ namespace MvcAppBegin.Controllers
 		}
 		public JsonResult GetAll()
 		{
-			return new JsonResult(_products);
+            return Json(_products);
 		}
         public ViewResult Index()
         {
